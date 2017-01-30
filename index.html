@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+<head>
+	<title>1st assignment</title>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+<h1>food details1</h1>
+<div ng-controller = 'LunchCheckController'>
+<input ng-model="list1" ng-type="text" ng-list/>
+    {{list1}}
+    <p>Exceeded or not:</p>
+    <p>no.of items in list:{{list1.length}}</p>
+	<button type="button" ng-click="check()">check</button>
+    <!-- {{list1.split(',')}} -->
+		<div ng-if="list1.length <= '3' ">
+           <p>{{text1}}</p>
+       </div>
+       <div ng-if="list1.length >= '4' ">
+           <p>{{text2}}</p>
+       </div>
+      
+    <!-- <p ng-model="text"></p> -->
+ </div>
+</body>
+</html>
